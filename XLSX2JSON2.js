@@ -28,7 +28,7 @@ module.exports = {
             }
         }
         function parse() {
-            let folder = __dirname+'/'+outputFolder;
+            let folder = outputFolder;
             if(!fs.existsSync(folder)) {
                 fs.mkdirSync(folder);
             }

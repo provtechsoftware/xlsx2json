@@ -27,5 +27,8 @@
     "node-xlsx": "^0.12.1",
     "strip-json-comments": "^2.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "bin": {
+    "xlsx2json": "index.js"
+  }
 }
