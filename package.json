@@ -25,7 +25,8 @@
   "dependencies": {
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
-    "node-xlsx": "^0.12.1"
+    "node-xlsx": "^0.12.1",
+    "strip-json-comments": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
