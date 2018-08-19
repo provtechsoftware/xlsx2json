@@ -1,9 +1,9 @@
-import commandLineArgs from 'command-line-args';
-import commandLineUsage from 'command-line-usage';
-import { XLSX2JSON } from './XLSX2JSON';
-import fs from 'fs';
-import stripJsonComments from 'strip-json-comments';
-
+#!/usr/bin/env node
+let xlsx2json = require('./XLSX2JSON');
+let fs = require('fs');
+let stripJsonComments = require('strip-json-comments');
+let commandLineArgs = require('command-line-args');
+let commandLineUsage = require('command-line-usage');
 
 let optionDefinitions = [
     {name:'input', alias:'i', type:String, defaultOption: true, defaultValue:'input.xlsx',description:'XLSX file to be processed'},
@@ -32,6 +32,5 @@ if(options.help === true) {
 else {
     let templateFile = fs.readFileSync(options.template).toString();
     let template = JSON.parse(stripJsonComments(templateFile));
-    let xlsx = new XLSX2JSON(options.input, options.output, template);
-    xlsx.parse();
+    xlsx2json.xlsx2json(options.input, options.output, template);
 }
