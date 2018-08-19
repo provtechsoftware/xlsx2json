@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-let xlsx2json = require('./XLSX2JSON');
+let xlsx2json = require('./xlsx2json');
 let fs = require('fs');
 let stripJsonComments = require('strip-json-comments');
 let commandLineArgs = require('command-line-args');
